@@ -30,7 +30,7 @@ const Education = () => {
   ) 
   return (
     <div className='my-64'>
-        <AnimatedText text="Education" className="font-bold text-8xl mb-20 -mt-4.5 w-full text-center"/>
+        <AnimatedText text="Education" className="font-bold text-8xl mb-20 -mt-4.5 w-full text-center md:text-6xl xs:text-4xl md:mb-16"/>
 
         <div ref={ref} className='w-[75%] mx-auto mb-20 relative'>
             <motion.div style={{scaleY:scrollYProgress}} className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light xl:h-[80%] lg:h-[90%] md:h-[70%] md:w-[2px] md:left-[30px] xs:!left-[20px] xs:h-[60%]"/>

@@ -8,23 +8,14 @@ import { BsGithub } from 'react-icons/bs'
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect'
 
-import project1 from "../../public/images/projects/mozilla-pic.png";
-import project2 from "../../public/images/projects/acm-pic.png";
-import project3 from "../../public/images/projects/discord-pic.png";
-import project4 from "../../public/images/projects/chaos-pic.png";
-import project5 from "../../public/images/projects/portfolio.png";
-import project6 from "../../public/images/projects/chess.png";
-import project7 from "../../public/images/projects/pacman-pic.png";
-import project8 from "../../public/images/projects/minecraft.png";
-import project9 from "../../public/images/projects/mystery.jpg";
-import project10 from "../../public/images/projects/btd-pic.png";
+import {Projects} from '../constants/constants'
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({type, title, summary, img, link = '/', github}) => {
+const FeaturedProject = ({type, title, summary, img, link, github, id}) => {
     return(
         <article className='w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl
-        border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
+        border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4' key={id}>
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light"/>
             <Link href={`${link}`} target={"_blank"} className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
                 <FramerImage src={img} alt={title} className='w-full h-auto'
@@ -47,10 +38,10 @@ const FeaturedProject = ({type, title, summary, img, link = '/', github}) => {
     )
 }
 
-const Project = ({title, type, img, link, github}) => {
+const Project = ({title, type, img, link, github, id}) => {
     return (
         <article className='w-full flex-col items-center justify-center rounded-2xl
-        border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4 '>
+        border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4' key={id}>
             <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem] md:-right-2 mid:w-[101%] xs:h-[102%] "/>
             <Link href={`${link}`} target={"_blank"} className='w-full cursor-pointer overflow-hidden rounded-lg'>
                 <FramerImage src={img} alt={title} className='w-full h-auto'
@@ -83,105 +74,12 @@ const projects = () => {
             <Layout className='pt-16'>
                 <AnimatedText text="Imagination Trumps Knowledge!"
                 className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'/>
-
-                <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5'>
-                    <div className='col-span-12'>
-                        <FeaturedProject
-                        type="Featured Project"
-                        title="Mozilla UI Migrator Modal"
-                        summary="An updated migrator modal for Firefox, as part of a CS Capstone Project Program between the California State University,
-                        Los Angeles (CSULA) team and the Mozilla Foundation."
-                        img={project1}
-                        link="/"
-                        github="/"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Web and Internet Programming"
-                        title="ACM@CSULA"
-                        img={project2}
-                        link="https://acm-calstatela.com/"
-                        github="https://github.com/acm-csula/ACM-Main-Website"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Discord Development"
-                        title="Syndicate Discord Bot"
-                        img={project3}
-                        link="https://github.com/BPhi-ai/Syndicate"
-                        github="https://github.com/BPhi-ai/Syndicate"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Frontend Web Development"
-                        title="Technical Portfolio v1"
-                        img={project5}
-                        link="https://github.com/BPhi-ai/Website-Portfolio"
-                        github="https://github.com/BPhi-ai/Website-Portfolio"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Web and Internet Programming"
-                        title="ChaosSocial (Facebook Main Page Replica)"
-                        img={project4}
-                        link="https://github.com/BPhi-ai/ChaosSocial-React"
-                        github="https://github.com/BPhi-ai/ChaosSocial-React"
-                        />
-                    </div>
-
-                    <div className='col-span-12'>
-                        <FeaturedProject
-                        type="Featured Project"
-                        title="Unity 2D Kingdom Card Game"
-                        summary="As part of a 'multi-year' Unity development, this will represent a 2D-style card game that uses complex storytelling and card
-                        mechanics."
-                        img={project9}
-                        link="/"
-                        github="/"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Game Development"
-                        title="ACMium Minecraft Mod (Spring 2023)"
-                        img={project8}
-                        link="https://github.com/BPhi-ai/ACMatic_Experience_Mod"
-                        github="https://github.com/BPhi-ai/ACMatic_Experience_Mod"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Unity Game Development"
-                        title="Unity Bloons Tower Defense Remake (Fall 2022)"
-                        img={project10}
-                        link="https://github.com/BPhi-ai/ACM-BTDUnityRecreate"
-                        github="https://github.com/BPhi-ai/ACM-BTDUnityRecreate"
-                        />
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                        type="Unity Game Development"
-                        title="Unity Pacman Remake (Fall 2021)"
-                        img={project7}
-                        link="https://github.com/BPhi-ai/ACM-PacmanUnityRemake"
-                        github="https://github.com/BPhi-ai/ACM-PacmanUnityRemake"
-                        /> 
-                    </div>
-                    <div className='col-span-6'>
-                        <Project
-                       type="Game Development"
-                       title="Java AI Chess (Fall 2022)"
-                       img={project6}
-                       link="https://github.com/BPhi-ai/Java-Local-Chess"
-                       github="https://github.com/BPhi-ai/Java-Local-Chess"
-                        />
-                    </div>
-                </div>
-
+                 <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5'>
+                    {Projects.map(({type, title, summary, img, link, github, id}) => (
+                        type === 'Featured Project' ? <div className='col-span-12' key={id}><FeaturedProject type={type} title={title} summary={summary} img={img} link={link} github={github} id={id}/></div>
+                        : <div className='col-span-6' key={id}><Project type={type} title={title} img={img} link={link} github={github} id={id}/></div>
+                    ))}
+                 </div>
             </Layout>
         </main>
     </>

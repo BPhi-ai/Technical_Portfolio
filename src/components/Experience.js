@@ -36,14 +36,16 @@ const Experience = () => {
             <motion.div style={{scaleY:scrollYProgress}} className="absolute left-9 top-0 w-[4px] h-[85%] bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:!left-[20px] xs:h-[80%]"/>
             
             <ul className="w-full flex flex-col items-start justify-between ml-4 dark:text-light -mr-4 xs:ml-2">
-                <Details position="Software Contributor" company="Mozilla Foundation" time="August 2022- May 2023" address="Los Angeles, CA (Remote)"
-                work="As part of a CS Capstone Project Program between CSULA and the Mozilla Foundation, collaborated to implement additional migrators to support
-                additional browsers to migrate data into the Firefox Browser."/>
-                <Details position="Web Committee Leader" company="Association For Computing Machinery (CSULA)" time="December 2022- May 2023" address="Los Angeles, CA"
-                work="Worked with collaboration with the President, Webmaster, and the Web Team on updating ACM's main website to include events and activities
-                that are posted for ACM Members each semester."/>
+                <Details position="Vice President of Internal Affairs" company="Association For Computing Machinery (ACM)" time="September 2023 - Present" address="Los Angeles, CA"
+                work="Posting ACM announcements on the main ACM Discord server, about events and workshops to about 300+ ACM members, in addition of publishing ACM posts on ACM's social media accounts."/>
                 <Details position="Story Developer" company="TBA" time="July 2023 - Present" address="Remote"
                 work="Working on the story of a Unity based 2D game, introducing events that will be implemented throughout the game."/>
+                <Details position="Web Committee Leader" company="Association For Computing Machinery (ACM)" time="December 2022 - May 2023" address="Los Angeles, CA"
+                work="Worked with collaboration with the President, Webmaster, and the Web Team on updating ACM's main website to include events and activities
+                that are posted for ACM Members each semester."/>
+                <Details position="Open-Source Software Contributor" company="Mozilla Foundation" time="August 2022- May 2023" address="Remote"
+                work="As part of a CS Capstone Project Program between CSULA and the Mozilla Foundation, collaborated to implement additional migrators to support
+                Chromium-based browsers to migrate data into Firefox. Working with team members to fix 75+ migration-related bugs."/>
             </ul>
         </div>
     </div>

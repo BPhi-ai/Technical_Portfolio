@@ -60,14 +60,14 @@ const Navbar = () => {
                 <CustomLink href="/" title="Home" className='mr-4'/>
                 <CustomLink href="/about" title="About"className='mx-4'/>
                 <CustomLink href="/projects" title="Projects" className='mr-4 ml-4'/>
-                <CustomLink href="/learn" title="Learn" className='ml-4'/>
+                <CustomLink href="/journey" title="Journey" className='ml-4'/>
             </nav>
         
             <nav className='flex items-center justify-center flex-wrap'>
                 <motion.a href="https://www.facebook.com/brian.pham.3950/" target={"_blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsFacebook style={{fontSize: 2 + 'em'}}/></motion.a>
                 <motion.a href="https://www.instagram.com/briantrpham/" target={"_blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsInstagram style={{fontSize: 2 + 'em'}}/></motion.a>
                 <motion.a href="https://twitter.com/briantrpham" target={"_blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsTwitter style={{fontSize: 2 + 'em'}}/></motion.a>
-                <motion.a href="https://www.linkedin.com/in/brian-pham-a5674b163/" target={"_blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsLinkedin style={{fontSize: 2 + 'em'}}/></motion.a>
+                <motion.a href="https://www.linkedin.com/in/bphams/" target={"_blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsLinkedin style={{fontSize: 2 + 'em'}}/></motion.a>
                 <motion.a href="https://github.com/BPhi-ai" target={"blank"} whileHover={{y:-5}}whileTap={{scale:0.9}}className="w-10 mx-3"><BsGithub style={{fontSize: 2 + 'em'}}/></motion.a>
                 <button onClick={() => setMode(mode ==='light' ? "dark" : "light")} className={`ml-3 flex items-center justify-center rounded-full p-1 w-9 h-9 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
                     {
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <CustomMobileLink href="/" title="Home" className=''toggle={handleClick}/>
                     <CustomMobileLink href="/about" title="About"className=''toggle={handleClick}/>
                     <CustomMobileLink href="/projects" title="Projects" className=''toggle={handleClick}/>
-                    <CustomMobileLink href="/learn" title="Learn" className=''toggle={handleClick}/>
+                    <CustomMobileLink href="/journey" title="Journey" className=''toggle={handleClick}/>
                 </nav>
             
                 <nav className='flex items-center justify-center flex-wrap mt-2'>
